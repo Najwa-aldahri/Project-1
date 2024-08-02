@@ -1,30 +1,34 @@
 import 'dart:io';
+import 'manage_employee.dart';
+import 'modify.dart';
 
 void main() {
-  Map<String, dynamic> employeeInfo = {};
+  // ManageEmployee managment = ManageEmployee();
+  ManageEmployee employee = ManageEmployee();
+  Modify modify = Modify(employee);
 
-  print("Add the emplyee name");
-  String name = stdin.readLineSync()!;
-  print("Add the emplyee salary");
-  String? salary = stdin.readLineSync();
-  print("Add the emplyee Premision");
-  String? premision = stdin.readLineSync()!;
-  print("Add the job description");
-  String? description = stdin.readLineSync()!;
+  while (true) {
+    print("1-add new employee");
+    print("2-display employee info");
+    print("3-modify employee salary");
+    int input = int.parse(stdin.readLineSync()!);
 
-  employeeInfo[name] = {
-    "salary": salary,
-    "premision": premision,
-    "job description": description,
-  };
+    switch (input) {
+      case 1:
+        employee.addemploye();
+      case 2:
+        employee.displayEmployeeData();
+      case 3:
+        modify.modifyEmployeeSalary();
+    }
 
-  employeeInfo.forEach((name, details) {
-    print("-------------------------");
-    print('Name: $name');
-    details.forEach((key, value) {
-      print('$key: $value');
-    });
-    print('');
-    print("-------------------------");
-  });
+    // managment.addEmployee(employee);
+  }
 }
+
+// modify({required int employeeSalary}) {
+//   print("add the modifyed salary");
+//   int modifyedSalary = int.parse(stdin.readLineSync()!);
+//   employeeSalary = modifyedSalary + employeeSalary;
+//   print(employeeSalary);
+// }
