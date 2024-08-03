@@ -3,16 +3,16 @@ import 'manage_employee.dart';
 import 'modify.dart';
 
 void main() {
-  // ManageEmployee managment = ManageEmployee();
   ManageEmployee employee = ManageEmployee();
   Modify modify = Modify(employee);
-
+  print("----> Welcom to employee managment system <----");
   while (true) {
-    print("1-add new employee");
-    print("2-display employee info");
-    print("3-modify employee salary");
-    print("4-modify employee job description");
-    int input = int.parse(stdin.readLineSync()!);
+    print("1-Add new employee");
+    print("2-Display employee info");
+    print("3-Modify employee salary");
+    print("4-Update employee job description");
+    print("5-Modify employee premmision");
+    int input = inputChecker("Choose an option:");
 
     switch (input) {
       case 1:
@@ -23,15 +23,21 @@ void main() {
         modify.modifyEmployeeSalary();
       case 4:
         modify.modifyEmployeeDescription();
+      case 5:
+        modify.modifyEmployeePremmision();
     }
-
-    // managment.addEmployee(employee);
   }
 }
 
-// modify({required int employeeSalary}) {
-//   print("add the modifyed salary");
-//   int modifyedSalary = int.parse(stdin.readLineSync()!);
-//   employeeSalary = modifyedSalary + employeeSalary;
-//   print(employeeSalary);
-// }
+int inputChecker(String prompt) {
+  int? result;
+  while (result == null) {
+    print(prompt);
+    try {
+      result = int.parse(stdin.readLineSync()!);
+    } catch (e) {
+      print('Invalid input. Please enter a valid number.');
+    }
+  }
+  return result;
+}

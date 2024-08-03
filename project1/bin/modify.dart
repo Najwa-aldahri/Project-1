@@ -7,11 +7,11 @@ import 'manage_employee.dart';
 
 
 class Modify {
-// ManageEmployee manage = ManageEmployee();
   ManageEmployee manage;
-//  Modify(manage);
   Modify(this.manage);
 
+
+//to modify the employee salary
   void modifyEmployeeSalary() {
     print("what is your role in the company? (admin,manager,worker...etc).");
     String role = stdin.readLineSync()!;
@@ -34,40 +34,42 @@ class Modify {
     }
   }
 
+//to update the employee job description
   modifyEmployeeDescription() {
     print("what is your role in the company? (admin,manager,worker...etc).");
     String role = stdin.readLineSync()!;
     String lowerCase = role.toLowerCase();
     if (lowerCase == "admin") {
       print("Enter the employee ID you want to modify job descreption");
-      int? empid = int.parse(stdin.readLineSync()!);
-      if (!manage.employeeData.containsKey(empid)) {
+      int? empId = int.parse(stdin.readLineSync()!);
+      if (!manage.employeeData.containsKey(empId)) {
         print("Employee not found.\n");
         return;
       }
       print("what is the new description?");
       String? newDescription = stdin.readLineSync()!;
-      manage.employeeData[empid]!.description = newDescription;
+      manage.employeeData[empId]!.description = newDescription;
       print("Employee job description updated successfully.\n");
     } else {
       print("Sorry you don't have premission to control the employee salary");
     }
   }
 
+//to modify the employee premmision
   modifyEmployeePremmision() {
     print("what is your role in the company? (admin,manager,worker...etc).");
     String role = stdin.readLineSync()!;
     String lowerCase = role.toLowerCase();
     if (lowerCase == "admin") {
       print("Enter the employee ID you want to modify job descreption");
-      int? empid = int.parse(stdin.readLineSync()!);
-      if (!manage.employeeData.containsKey(empid)) {
+      int? empId = int.parse(stdin.readLineSync()!);
+      if (!manage.employeeData.containsKey(empId)) {
         print('Employee not found.\n');
         return;
       }
       print("what is the new premission?");
       String? newPrmission = stdin.readLineSync()!;
-      manage.employeeData[empid]!.permission = newPrmission;
+      manage.employeeData[empId]!.permission = newPrmission;
       print("Employee premission updated successfully.\n");
     } else {
       print("Sorry you don't have premission to control the employee salary");

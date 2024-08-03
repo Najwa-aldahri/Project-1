@@ -1,6 +1,10 @@
 import 'dart:io';
 import 'employee.dart';
 
+/*in the Manage Employee class will be all about 
+-adding the employee info to the map 
+-displaying the map  */
+
 class ManageEmployee {
   //empty map for the emplyee information
   Map<int, dynamic> employeeData = {};
@@ -8,14 +12,14 @@ class ManageEmployee {
 //adding employee function
   addemploye() {
 //collecting employee information
-    print("Add the emplyee id");
+    print("Add the employee id");
     final int id = int.parse(stdin.readLineSync()!);
-    print("Add the emplyee name");
+    print("Name of the employee");
     String name = stdin.readLineSync()!;
-    print("Add the emplyee salary");
-    int salary = int.parse(stdin.readLineSync()!);
-    print("Add the emplyee Premision");
-   var permission = stdin.readLineSync()!;
+    print("Salary of the employee");
+    double salary = double.parse(stdin.readLineSync()!);
+    print("Add the Premision");
+    var permission = stdin.readLineSync()!;
     print("Add the job description");
     String? description = stdin.readLineSync()!;
 
@@ -29,7 +33,8 @@ class ManageEmployee {
     );
     employeeData[id] = employee;
 
-    print('Employee data added successfully.\n');
+    print("Employee information added successfully !!\n");
+    print("--------------------------------------------");
   }
 
 //display function
@@ -43,16 +48,5 @@ class ManageEmployee {
       print(employee.employeeInfo());
       print("----------------------");
     });
-
-    // employeeData.forEach((id, employee) {
-    //   // 'details' is the inner map
-    //   print("----------------------");
-    //   print('ID: $id');
-    //   details.forEach((key, value) {
-    //     print('$key: $value');
-    //   });
-    //   print("----------------------");
-    //   print(''); // Add a newline for better readability
-    // });
   }
 }

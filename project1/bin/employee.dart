@@ -1,7 +1,7 @@
 class Employee {
   final id;
   String name;
-  int salary;
+  double salary;
   var permission;
   String description;
 
