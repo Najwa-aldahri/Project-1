@@ -11,6 +11,7 @@ void main() {
     print("1-add new employee");
     print("2-display employee info");
     print("3-modify employee salary");
+    print("4-modify employee job description");
     int input = int.parse(stdin.readLineSync()!);
 
     switch (input) {
@@ -20,6 +21,8 @@ void main() {
         employee.displayEmployeeData();
       case 3:
         modify.modifyEmployeeSalary();
+      case 4:
+        modify.modifyEmployeeDescription();
     }
 
     // managment.addEmployee(employee);

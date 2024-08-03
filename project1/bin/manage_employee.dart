@@ -3,7 +3,7 @@ import 'employee.dart';
 
 class ManageEmployee {
   //empty map for the emplyee information
-  Map<int, Employee> employeeData = {};
+  Map<int, dynamic> employeeData = {};
 
 //adding employee function
   addemploye() {
