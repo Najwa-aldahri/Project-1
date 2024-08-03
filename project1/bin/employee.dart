@@ -1,8 +1,8 @@
 class Employee {
-  int id;
+  final id;
   String name;
   int salary;
-  String permission;
+  var permission;
   String description;
 
   Employee({
@@ -13,11 +13,7 @@ class Employee {
     required this.description,
   });
 
- 
   String employeeInfo() {
     return "ID: $id\nName: $name\nSalary: $salary\nPermission: $permission\nJob Description: $description";
   }
-
-
 }
-

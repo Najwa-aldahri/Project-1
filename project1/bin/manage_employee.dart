@@ -9,13 +9,13 @@ class ManageEmployee {
   addemploye() {
 //collecting employee information
     print("Add the emplyee id");
-    int? id = int.parse(stdin.readLineSync()!);
+    final int id = int.parse(stdin.readLineSync()!);
     print("Add the emplyee name");
-    final name = stdin.readLineSync()!;
+    String name = stdin.readLineSync()!;
     print("Add the emplyee salary");
-    int? salary = int.parse(stdin.readLineSync()!);
+    int salary = int.parse(stdin.readLineSync()!);
     print("Add the emplyee Premision");
-    String? permission = stdin.readLineSync()!;
+   var permission = stdin.readLineSync()!;
     print("Add the job description");
     String? description = stdin.readLineSync()!;
 
