@@ -1,6 +1,10 @@
-### Project Challenge: Simple Employee Manager
+![Employee_Manager](https://github.com/user-attachments/assets/94c33a63-b6d3-4f4f-86ce-d3660d3ec3ca)
 
-#### Project Idea:
+
+### Project Challenge: Simple Employee 
+
+#### Project Idea:![acc pic](https://github.com/user-attachments/assets/f1e30fad-ccf5-4a06-a423-fc2b3c59b3e8)
+
 Create a simple application to manage employees where users can add new employees, assign permissions, display their data, and modify their salaries, permissions, and job descriptions.
 
 #### Requirements:
